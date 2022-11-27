@@ -41,7 +41,7 @@ const MyForm = () => {
         validators={["required", "isEmail"]}
         errorMessages={["this field is required", "email is not valid"]}
       />
-      <br />
+
       <TextValidator
         style={{ margin: "10px", width: "95%" }}
         label="first_name"
@@ -51,7 +51,7 @@ const MyForm = () => {
         validators={["required"]}
         errorMessages={["this field is required"]}
       />
-      <br />
+
       <TextValidator
         style={{ margin: "10px", width: "95%" }}
         label="Lastname"
@@ -61,8 +61,9 @@ const MyForm = () => {
         validators={["required"]}
         errorMessages={["this field is required"]}
       />
-      <br />
+
       <Button
+        disabled={!user.email || !user.first_name || !user.last_name}
         color="primary"
         variant="contained"
         type="submit"

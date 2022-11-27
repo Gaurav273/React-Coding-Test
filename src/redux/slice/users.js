@@ -27,18 +27,15 @@ const users = createSlice({
     },
   ],
 
-  extraReducers: {
-    [fetchAsyncUsers.pending]: () => {},
-    [fetchAsyncUsers.fulfilled]: (state, { payload }) => {
+  extraReducers: (builder) => {
+    builder.addCase(fetchAsyncUsers.fulfilled, (state, { payload }) => {
       return { ...state, ...payload };
-    },
-    [fetchAsyncUsers.rejected]: () => {},
-    [addAsyncUsers.pending]: () => {},
-    [addAsyncUsers.fulfilled]: (state, { payload }) => {
+    });
+
+    builder.addCase(addAsyncUsers.fulfilled, (state, { payload }) => {
       state.data.push(payload);
       return state;
-    },
-    [addAsyncUsers.rejected]: () => {},
+    });
   },
 });
 
