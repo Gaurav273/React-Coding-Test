@@ -2,7 +2,7 @@
   "name": "demo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "  https://Gaurav273.github.io/React-Coding-Test",
+  "homepage": "https://Gaurav273.github.io/React-Coding-Test",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
